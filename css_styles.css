@@ -1,0 +1,250 @@
+/* 
+
+  Page:         Css Styles Stylesheet
+  Purpose:      Aesthetic and Visual Component Stylesheet
+  Author:       Reeve C Jarvis
+  Last Update:  12-08-2020
+
+*/
+
+
+/* General Styles */
+
+html {
+  background: url(photos/colourbackground.svg) center center/cover no-repeat
+      fixed,
+    black;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  background-color: rgba(25, 60, 95, 0.6);
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+footer {
+  background-color: rgba(8, 59, 27, 0.6);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bold;
+  text-align: center;
+  line-height: normal;
+}
+
+p {
+  font-weight: normal;
+}
+
+ul,
+li {
+  text-align: center;
+}
+
+img {
+  border-radius: 1em;
+}
+
+hr {
+  border: solid rgb(15, 38, 61);
+}
+
+/* Header Styles */
+
+img#logo {
+  border-radius: 0%;
+}
+
+nav#tabs li {
+  background-color: rgba(8, 59, 27, 0.6);
+  letter-spacing: 3px;
+  line-height: 30px;
+}
+
+nav#tabs li a {
+  color: white;
+}
+
+nav#tabs li:hover {
+  background-color:rgba(25, 177, 83, 0.6);
+}
+
+/* Footer Styles*/
+
+footer li:hover {
+  background-color: rgba(25, 177, 83, 0.6);
+}
+
+div#tag {
+  font-size: small;
+}
+
+div#links ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+img.socials:hover {
+  opacity: 0.7;
+}
+
+/* About Me Page Styles */
+
+section#self {
+  background-color: rgba(25, 60, 95, 0.6);
+  border-radius: 1em/1.5em;
+  border: solid rgb(15, 38, 61);
+  font-size: 1.2em;
+}
+
+article#aboutme h2{
+    font-size: 1.1em;
+    text-align: left;
+}
+
+section#partners h1,
+section#adventures h1 {
+  text-align: left;
+}
+
+img.partners {
+  border-radius: 1em;
+}
+
+figcaption {
+  font-size: 1.5em;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+/* Portfolio Page Styles */
+
+section#intro {
+  background-color: rgba(25, 60, 95, 0.6);
+  border: solid rgb(15, 38, 61);
+  border-radius: 1em;
+}
+
+div#skills {
+  border: solid rgb(15, 38, 61);
+  border-radius: 1em;
+}
+
+div#skills h2 {
+  font-size: 1.2em;
+}
+
+div.text a{
+    color: white;
+}
+
+div.text a:hover{
+    color: rgba(25, 177, 83, 0.6);
+}
+
+section.portfolio {
+  text-align: left;
+}
+
+section.portfolio h1 {
+  text-align: left;
+  font-size: 1.2em;
+}
+
+/* Game Room Page Styles */
+
+section#games{
+    background-color: rgba(25, 60, 95, 0.6);
+    border: solid rgb(15, 38, 61);
+    border-radius: 1em;
+}
+
+div#upnext {
+    border: solid rgb(15, 38, 61);
+    border-radius: 1em;
+}
+
+div#upnext h1{
+    font-size: 1.5em;
+}
+
+section#games figcaption{
+    font-size: 0.7em;
+}
+
+h2.title{
+    font-size: 1.5em;
+    text-align: left;
+}
+
+
+
+/* Contact Page Styles */
+
+div.methods {
+  background-color: rgba(25, 60, 95, 0.6);
+  border: solid rgb(15, 38, 61);
+  border-radius: 1em/1.5em;
+}
+
+div#contact a {
+  text-decoration: none;
+  color: white;
+}
+
+div#contact a:hover {
+  color: rgba(25, 177, 83, 0.6);
+}
+
+img#headshot {
+  border-radius: 5em/5em;
+}
+
+table#calendar {
+  background: rgba(25, 60, 95, 0.4);
+  border: solid rgb(15, 38, 61);
+}
+
+table#calendar th,
+td {
+  border: solid rgb(15, 38, 61);
+  line-height: 3em;
+}
+
+table#calendar td:not(.busy):hover {
+  background-color: rgba(25, 177, 83, 0.6);
+}
+
+td.busy {
+  background-color: rgba(95, 25, 25, 0.6);
+}
+
+fieldset#details {
+  border: solid rgb(15, 38, 61);
+  border-radius: 1em;
+  background-color: rgba(25, 60, 95, 0.7);
+}
+
+input,
+textarea,
+select {
+  background-color: rgba(185, 188, 190, 0.7);
+}
+
+input.press {
+  background-color: white;
+}
+
+input:hover,
+textarea:hover,
+select:hover,
+input.press:hover {
+  background-color: rgba(25, 177, 83, 0.6);
+}

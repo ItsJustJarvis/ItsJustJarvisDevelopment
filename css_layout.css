@@ -1,0 +1,547 @@
+/* 
+
+  Page:         Css Layout Page
+  Purpose:      Structural Layout Stylesheet
+  Author:       Reeve C Jarvis
+  Last Update:  12-08-2020
+
+*/
+
+/* General Layout */
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  min-width: 320px;
+  max-width: 1024px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  width: 100%;
+}
+
+footer {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 1em 1em;
+  width: 100%;
+  margin-top: auto;
+}
+
+hr {
+  width: 100%;
+}
+
+h1,
+h2 {
+  margin: auto;
+  font-size: 2em;
+  padding: 0.5em;
+  width: 100%;
+}
+
+p {
+  padding: 0.5em;
+}
+
+/* Header Layout */
+
+img#logo {
+  display: block;
+  width: 70%;
+  margin: auto;
+  padding: 1em;
+}
+
+nav#tabs {
+  width: 100%;
+  margin: auto;
+}
+
+nav#tabs ul {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+nav#tabs ul li {
+  flex: auto;
+}
+
+/* Footer Layout */
+
+footer div {
+  flex: auto;
+  width: 33%;
+}
+
+div#links ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+footer ul li {
+  flex: auto;
+}
+
+img.socials {
+  flex: auto;
+  width: 2em;
+}
+
+/* Landing Page */
+
+article#welcome {
+  width: 80%;
+  margin: auto;
+  padding: 1em;
+}
+
+article#welcome p {
+  padding: 0em 2em 1em 2em;
+}
+
+/* About Me Page Layout */
+
+section#self {
+  display: flex;
+  flex-flow: row wrap;
+  width: 90%;
+  margin: 1em auto;
+  padding: 1em 2em;
+}
+
+div#selfPortrait {
+  flex: auto;
+  width: 50%;
+  padding: 1.5em;
+}
+
+img#me,
+img.partners {
+  flex: auto;
+  width: 100%;
+}
+
+article#aboutme {
+  flex: auto;
+  padding: 1em;
+  width: 50%;
+}
+
+section#partners {
+  display: flex;
+  flex-flow: row wrap;
+  width: 90%;
+  margin: auto;
+}
+
+div.kaylaArchie {
+  flex: auto;
+  width: 50%;
+}
+
+div.kaylaArchie figure {
+  flex: auto;
+  width: 60%;
+  margin: auto;
+}
+
+div.kaylaArchie p {
+  flex: auto;
+  width: 60%;
+  margin: auto;
+  padding-top: 1em;
+}
+
+section#adventures {
+  width: 90%;
+  margin: 1em auto;
+}
+
+/* Gallery styles*/
+
+div.row {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0 3px;
+}
+
+div.column {
+  flex: auto;
+  max-width: 25%;
+  height: 100%;
+  padding: 0 3px;
+}
+
+div.column img {
+  border-radius: 5%;
+  margin-top: 6px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Portfolio Page */
+
+section#intro {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1em auto;
+  padding: 2em;
+  width: 90%;
+}
+
+div#blurb {
+  width: 75%;
+  padding: 1em;
+}
+
+div#skills {
+  display: flex;
+  flex-flow: row wrap;
+  width: 25%;
+  margin: auto;
+  padding: 1em;
+}
+
+div#skills h2 {
+  margin-bottom: 1em;
+}
+
+section.portfolio {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1em auto;
+  padding: 1em;
+  width: 90%;
+}
+
+section.portfolio div {
+  flex-flow: column wrap;
+  flex: 1 1 auto;
+}
+
+div.text {
+  flex: auto;
+  width: 40%;
+  padding: 2em;
+}
+
+div.examples {
+  flex: auto;
+  width: 40%;
+  margin: auto;
+}
+
+div.examples img {
+  flex: auto;
+  width: 100%;
+}
+
+/* Game Room */
+
+section#games {
+  display: flex;
+  flex-flow: row wrap;
+  width: 90%;
+  margin: 1em auto;
+  padding: 1em;
+}
+
+div#current {
+  display: flex;
+  flex-flow: row wrap;
+  width: 70%;
+  margin: auto;
+}
+
+figure.playing {
+  flex: auto;
+  width: 23%;
+  margin: auto;
+  padding: 0.5em;
+}
+
+figure.playing img {
+  width: 100%;
+}
+
+div#upnext {
+  display: flex;
+  flex-flow: row wrap;
+  width: 27%;
+  margin: auto;
+  padding: 1em;
+}
+
+figure.comingsoon {
+  flex: auto;
+  width: 50%;
+  margin: auto;
+  padding: 0.5em;
+}
+
+figure.comingsoon img {
+  width: 100%;
+}
+
+section#topthree {
+  display: flex;
+  flex-flow: column wrap;
+  width: 90%;
+  margin: auto;
+}
+
+div.top {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  padding: 2em;
+}
+
+div.top article {
+  width: 60%;
+  margin: auto;
+}
+
+div.top div {
+  width: 30%;
+}
+
+div.top img {
+  width: 100%;
+}
+
+div.top p,
+h2.title {
+  width: 90%;
+  margin: auto;
+}
+
+/* Contact Page */
+
+section#schedule {
+  display: flex;
+  flex-flow: row wrap;
+  width: 90%;
+  margin: auto;
+}
+
+section#schedule h1 {
+  padding: 1em;
+}
+
+div#contact {
+  flex: auto;
+  width: 40%;
+  margin: auto;
+  padding: 1em;
+}
+
+div#contact figure {
+  flex: auto;
+  width: 40%;
+  margin: auto;
+}
+
+div.methods {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1em auto;
+  padding: 0.5em;
+  width: 90%;
+}
+
+img#headshot {
+  width: 100%;
+}
+
+table#calendar {
+  flex: auto;
+  width: 60%;
+}
+
+table#calendar td {
+  padding: 0 1em 1em 0.5em;
+}
+
+/* Form Layout */
+
+form#request {
+  width: 90%;
+  margin: 1em auto;
+}
+
+fieldset#details {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  margin: auto;
+  padding: 0.2em;
+}
+
+div#fColumn1,
+div#fColumn2 {
+  flex: auto;
+  width: 25%;
+}
+
+div#fColumn3 {
+  flex: auto;
+  width: 50%;
+}
+
+div.fRow {
+  flex: auto;
+  width: 90%;
+  padding: 0.5em;
+}
+
+textarea {
+  flex: auto;
+  width: 100%;
+}
+
+div#buttons {
+  flex: auto;
+  width: 40%;
+  margin-left: auto;
+}
+
+/*Responsive Features*/
+
+@media only screen and (max-width: 769px) {
+  /* About Me */
+
+  section#self {
+    flex-direction: column;
+  }
+
+  div#selfPortrait {
+    width: 50%;
+    padding: 0;
+    margin: auto;
+  }
+
+  article#aboutme {
+    width: 100%;
+    padding: 0;
+  }
+
+  div.column {
+    flex: 1 2 auto;
+    max-width: 50%;
+  }
+
+  /* Contact Page */
+
+  div#fColumn1,
+  div#fColumn2 {
+    width: 50%;
+  }
+
+  div#fColumn3,
+  div#buttons {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* General */
+
+  nav#tabs li {
+    width: 50%;
+  }
+
+  /* Landing Page */
+
+  article#welcome h1,
+  article#welcome p {
+    padding: 1em 0;
+  }
+
+  /* About Me Page */
+
+  div#selfPortrait,
+  article#aboutme {
+    width: 100%;
+    padding: 0;
+  }
+
+  article#aboutme p,
+  div.kaylaArchie {
+    width: 100%;
+  }
+
+  div.kaylaArchie p,
+  div.kaylaArchie figure {
+    width: 80%;
+  }
+
+  div.column {
+    flex: 2 1 auto;
+    max-width: 100%;
+  }
+
+  /* Portfolio Page */
+
+  div#blurb {
+    width: 100%;
+  }
+
+  div#blurb p {
+    padding: 1em 0;
+    width: 100%;
+  }
+
+  div#skills,
+  section.portfolio div {
+    width: 100%;
+  }
+
+  /* Game Room Page */
+
+  div#current,
+  div#upnext,
+  figure.playing img,
+  figure.comingsoon img,
+  div.top div,
+  div.top article,
+  h1.title,
+  div.top p {
+    width: 100%;
+  }
+
+  figure.playing,
+  figure.comingsoon {
+    width: 80%;
+  }
+
+  /* Contact page */
+
+  div#contact {
+    order: 1;
+  }
+
+  table#calendar {
+    order: 2;
+    width: 95%;
+    margin: auto;
+  }
+
+  div#fColumn1,
+  div#fColumn2,
+  div#fColumn3,
+  div#buttons {
+    width: 100%;
+  }
+}

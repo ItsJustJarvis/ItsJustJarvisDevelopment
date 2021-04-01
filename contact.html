@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+      Page:         Contact Page
+      Purpose:      Current availability and Contact Information, including form for service requests.
+      Author:       Reeve C Jarvis
+      Last Update:  12-08-2020
+    -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ItsJustJarvis Design and Development - Owned and Operated by Reeve-C-Jarvis. Personal, attentive service for your business needs."
+    />
+    <meta
+      name="keywords"
+      content="ItsJustJarvis, Design, Development, HTML, CSS, Java, Database, Freelance, Developer"
+    />
+    <title>ItsJustJarvis Development</title>
+    <link rel="stylesheet" href="css_base.css" />
+    <link rel="stylesheet" href="css_layout.css" />
+    <link rel="stylesheet" href="css_styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="ItsJustJarvis.html"
+        ><img
+          id="logo"
+          src="photos/titleimage.png"
+          alt="ItsJustJarvis Development"
+      /></a>
+      <nav id="tabs">
+        <ul>
+          <li><a href="aboutme.html">About Me</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="gameroom.html">Game Room</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="schedule">
+      <h1>Availability and Contact Information</h1>
+      <table id="calendar">
+        <thead>
+          <tr id="month">
+            <th colspan="7">December</th>
+          </tr>
+          <tr class="weekdays">
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+          </tr>
+        </thead>
+        <tr class="weeks">
+          <td>29</td>
+          <td>30</td>
+          <td>01</td>
+          <td>02</td>
+          <td>03</td>
+          <td>04</td>
+          <td>05</td>
+        </tr>
+        <tr class="weeks">
+          <td class="busy">06</td>
+          <td class="busy">07</td>
+          <td class="busy">08</td>
+          <td>09</td>
+          <td class="busy">10</td>
+          <td>11</td>
+          <td>12</td>
+        </tr>
+        <tr class="weeks">
+          <td>13</td>
+          <td class="busy">14</td>
+          <td class="busy">15</td>
+          <td class="busy">16</td>
+          <td class="busy">17</td>
+          <td class="busy">18</td>
+          <td>19</td>
+        </tr>
+        <tr class="weeks">
+          <td>20</td>
+          <td>21</td>
+          <td>22</td>
+          <td>23</td>
+          <td class="busy">24</td>
+          <td class="busy">25</td>
+          <td class="busy">26</td>
+        </tr>
+        <tr class="weeks">
+          <td class="busy">27</td>
+          <td class="busy">28</td>
+          <td class="busy">29</td>
+          <td class="busy">30</td>
+          <td class="busy">31</td>
+          <td class="busy">01</td>
+          <td>02</td>
+        </tr>
+      </table>
+      <div id="contact">
+        <figure>
+          <img id="headshot" src="photos/headshot.jpeg" alt="Reeve-C-Jarvis" />
+        </figure>
+        <h1>Contact Me:</h1>
+        <div class="methods">
+          <p>
+            Phone:&nbsp;<a id="call" href="tel:+12892001057">(289)-200-1057</a>
+          </p>
+        </div>
+        <div class="methods">
+          <p>
+            Email:&nbsp;<a id="mail" href="mailto:reevejarvis@hotmail.com"
+              >reevejarvis@hotmail.com</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+    <form
+      id="request"
+      action="http://dgl103.imgd.ca/formhandler.php"
+      target="_blank"
+      method="post"
+    >
+      <fieldset id="details">
+        <legend>Request for Services Contact Form:</legend>
+        <div id="fColumn1">
+          <div class="fRow">
+            <label for="firstN">First Name:</label>
+            <input
+              type="text"
+              name="FirstName"
+              id="firstN"
+              placeholder="First Name"
+              required
+            />
+          </div>
+          <div class="fRow">
+            <label for="lastN">Last Name:</label>
+            <input
+              type="text"
+              name="LastName"
+              id="lastN"
+              placeholder="Last Name"
+              required
+            />
+          </div>
+          <div class="fRow">
+            <label for="email">Email:</label>
+            <input
+              type="text"
+              name="Email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="fRow">
+            <label for="date">Requested Start Date:</label>
+            <input type="date" name="Date" id="date" />
+          </div>
+        </div>
+        <div id="fColumn2">
+          <div class="fRow">
+            <label for="option1">Web Development</label>
+            <input type="checkbox" name="Web Development" id="option1" />
+          </div>
+          <div class="fRow">
+            <label for="option2">Database Design</label>
+            <input type="checkbox" name="Database" id="option2" />
+          </div>
+          <div class="fRow">
+            <label for="option3">Java Programming</label>
+            <input type="checkbox" name="Java" id="option3" />
+          </div>
+          <div class="fRow">
+            <label for="option4">Project Planning</label>
+            <input type="checkbox" name="Project Management" id="option4" />
+          </div>
+          <div class="fRow">
+            <label for="option5">Graphic Design</label>
+            <input type="checkbox" name="Graphic Design" id="option5" />
+          </div>
+          <div class="fRow">
+            <label for="heard">Referral:&nbsp;</label>
+            <select name="Heard From" id="heard">
+              <option value="Customer">Customer Referral</option>
+              <option value="Colleague">Work Colleague</option>
+              <option value="Social">Social Media</option>
+              <option value="Online">Internet</option>
+              <option value="PreviousWork">Previous Work</option>
+            </select>
+          </div>
+        </div>
+        <div id="fColumn3">
+          <div class="fRow">
+            <label for="message">Describe your request:</label>
+            <textarea
+              name="Message"
+              id="message"
+              wrap="hard"
+              cols="30"
+              rows="11"
+              required
+            ></textarea>
+          </div>
+          <div id="buttons">
+            <input class="press" type="submit" value="Submit Request" />
+          </div>
+        </div>
+      </fieldset>
+    </form>
+    <footer>
+      <div>
+        <a href="https://www.facebook.com/reeve.jarvis/" target="_blank"
+          ><img class="socials" src="photos/facebook.png" alt="Facebooks"
+        /></a>
+        <a href="https://www.instagram.com/itsjustjarvis/" target="_blank"
+          ><img class="socials" src="photos/insta.png" alt="Instagram"
+        /></a>
+        <a href="https://steamcommunity.com/id/itsjustjarvis" target="_blank"
+          ><img class="socials" src="photos/steam.png" alt="Steam"
+        /></a>
+      </div>
+      <div id="tag">
+        <p>Designed and Developed By Reeve-C-Jarvis</p>
+      </div>
+      <div id="links">
+        <ul>
+          <li><a href="aboutme.html">About Me</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="gameroom.html">Game Room</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

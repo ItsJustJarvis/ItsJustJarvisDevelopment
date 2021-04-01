@@ -1,0 +1,96 @@
+/* 
+
+  Page:         Base (Reset) CSS Stylesheet
+  Purpose:      Structural Layout Stylesheet
+  Author:       Reeve C Jarvis
+  Last Update:  12-08-2020
+
+*/
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+address,
+article,
+aside,
+blockquote,
+body,
+cite,
+div,
+dl,
+dt,
+dd,
+em,
+figcaption,
+figure,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+img,
+li,
+main,
+nav,
+nav a,
+ol,
+p,
+section,
+span,
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: 1.2em;
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  vertical-align: baseline;
+}
+
+*, ::before, ::after{
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+nav ul {
+  list-style: none;
+  list-style-image: none;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+a{
+  color: white;
+}
