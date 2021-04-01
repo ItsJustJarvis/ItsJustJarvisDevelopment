@@ -100,6 +100,15 @@ img.socials {
 
 /* Landing Page */
 
+div#slideshow {
+  width: 80%;
+  margin: auto;
+}
+
+div#slideshow img {
+  width: 100%;
+}
+
 article#welcome {
   width: 80%;
   margin: auto;
