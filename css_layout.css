@@ -77,6 +77,38 @@ nav#tabs ul li {
   flex: auto;
 }
 
+div#header {
+  width: 90%;
+  display: flex;
+  margin: auto;
+  flex-flow: row wrap;
+}
+
+div#headerLogo {
+  width: 80%;
+  margin: auto;
+  flex: auto;
+}
+
+div#adminForm {
+  width: 20%;
+  flex: auto;
+  margin: auto;
+}
+
+fieldset#logInDetails {
+  display: flex;
+  flex-flow: column wrap;
+  margin: auto;
+}
+
+input.login-form-field,
+input.login-form-submit {
+  width: 100%;
+  flex: auto;
+  margin: auto;
+}
+
 /* Footer Layout */
 
 footer div {
@@ -383,6 +415,11 @@ table#calendar td {
   padding: 0 1em 1em 0.5em;
 }
 
+button.navigate {
+  font-size: 1.5em;
+  margin: auto;
+}
+
 /* Form Layout */
 
 form#request {
@@ -552,5 +589,12 @@ div#buttons {
   div#fColumn3,
   div#buttons {
     width: 100%;
+  }
+
+  div#headerLogo {
+    width: 100%;
+  }
+  div#adminForm {
+    width: 50%;
   }
 }

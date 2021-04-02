@@ -29,12 +29,36 @@
   </head>
   <body>
     <header>
-      <a href="ItsJustJarvis.html"
-        ><img
-          id="logo"
-          src="photos/titleimage.png"
-          alt="ItsJustJarvis Development"
-      /></a>
+      <div id="header">
+        <div id="headerLogo">
+          <a href="ItsJustJarvis.html"
+            ><img
+              id="logo"
+              src="photos/titleimage.png"
+              alt="ItsJustJarvis Development"
+          /></a>
+        </div>
+        <div id="adminForm">
+          <form id="adminLogIn">
+            <fieldset id="logInDetails">
+              <legend>Admin Log-In</legend>
+              <input
+                type="text"
+                name="username"
+                class="login-form-field"
+                placeholder="Username"
+              />
+              <input
+                type="password"
+                name="password"
+                class="login-form-field"
+                placeholder="Password"
+              />
+              <input type="submit" value="Login" id="login-form-submit" />
+            </fieldset>
+          </form>
+        </div>
+      </div>
       <nav id="tabs">
         <ul>
           <li><a href="aboutme.html">About Me</a></li>
@@ -48,8 +72,10 @@
       <h1>Availability and Contact Information</h1>
       <table id="calendar">
         <thead>
-          <tr id="month">
-            <th colspan="7">December</th>
+          <tr>
+            <th><button class="navigate" id="previousMonth">&lt;</button></th>
+            <th id="monthYear"></th>
+            <th><button class="navigate" id="nextMonth">&gt;</button></th>
           </tr>
           <tr class="weekdays">
             <th>Sun</th>
@@ -61,51 +87,7 @@
             <th>Sat</th>
           </tr>
         </thead>
-        <tr class="weeks">
-          <td>29</td>
-          <td>30</td>
-          <td>01</td>
-          <td>02</td>
-          <td>03</td>
-          <td>04</td>
-          <td>05</td>
-        </tr>
-        <tr class="weeks">
-          <td class="busy">06</td>
-          <td class="busy">07</td>
-          <td class="busy">08</td>
-          <td>09</td>
-          <td class="busy">10</td>
-          <td>11</td>
-          <td>12</td>
-        </tr>
-        <tr class="weeks">
-          <td>13</td>
-          <td class="busy">14</td>
-          <td class="busy">15</td>
-          <td class="busy">16</td>
-          <td class="busy">17</td>
-          <td class="busy">18</td>
-          <td>19</td>
-        </tr>
-        <tr class="weeks">
-          <td>20</td>
-          <td>21</td>
-          <td>22</td>
-          <td>23</td>
-          <td class="busy">24</td>
-          <td class="busy">25</td>
-          <td class="busy">26</td>
-        </tr>
-        <tr class="weeks">
-          <td class="busy">27</td>
-          <td class="busy">28</td>
-          <td class="busy">29</td>
-          <td class="busy">30</td>
-          <td class="busy">31</td>
-          <td class="busy">01</td>
-          <td>02</td>
-        </tr>
+        <tbody id="calendarBody"></tbody>
       </table>
       <div id="contact">
         <figure>
@@ -167,7 +149,12 @@
           </div>
           <div class="fRow">
             <label for="date">Requested Start Date:</label>
-            <input type="date" name="Date" id="date" />
+            <input
+              type="date"
+              name="Date"
+              id="date"
+              onchange="showSelectedMonth();"
+            />
           </div>
         </div>
         <div id="fColumn2">
@@ -244,5 +231,6 @@
         </ul>
       </div>
     </footer>
+    <script src="calendar.js"></script>
   </body>
 </html>

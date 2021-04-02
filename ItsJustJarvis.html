@@ -29,12 +29,36 @@
   </head>
   <body>
     <header>
-      <a href="ItsJustJarvis.html"
-        ><img
-          id="logo"
-          src="photos/titleimage.png"
-          alt="ItsJustJarvis Development"
-      /></a>
+      <div id="header">
+        <div id="headerLogo">
+          <a href="ItsJustJarvis.html"
+            ><img
+              id="logo"
+              src="photos/titleimage.png"
+              alt="ItsJustJarvis Development"
+          /></a>
+        </div>
+        <div id="adminForm">
+          <form id="adminLogIn">
+            <fieldset id="logInDetails">
+              <legend>Admin Log-In</legend>
+              <input
+                type="text"
+                name="username"
+                class="login-form-field"
+                placeholder="Username"
+              />
+              <input
+                type="password"
+                name="password"
+                class="login-form-field"
+                placeholder="Password"
+              />
+              <input type="submit" value="Login" id="login-form-submit" />
+            </fieldset>
+          </form>
+        </div>
+      </div>
       <nav id="tabs">
         <ul>
           <li><a href="aboutme.html">About Me</a></li>
@@ -45,7 +69,7 @@
       </nav>
     </header>
     <article id="welcome">
-      <h1>Welcome to ItsJustJarvis Design and Development</h1>
+      <h1 id="message">Welcome to ItsJustJarvis Design and Development</h1>
       <p>
         My name is Reeve Jarvis and I am an aspiring developer starting his
         journey towards a career in tech. Currently I am studying in the Web and
@@ -93,5 +117,6 @@
         </ul>
       </div>
     </footer>
+    <script src="logIn.js"></script>
   </body>
 </html>
