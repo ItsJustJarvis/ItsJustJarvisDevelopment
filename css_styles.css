@@ -7,7 +7,6 @@
 
 */
 
-
 /* General Styles */
 
 html {
@@ -72,7 +71,7 @@ nav#tabs li a {
 }
 
 nav#tabs li:hover {
-  background-color:rgba(25, 177, 83, 0.6);
+  background-color: rgba(25, 177, 83, 0.6);
 }
 
 /* Footer Styles*/
@@ -103,9 +102,9 @@ section#self {
   font-size: 1.2em;
 }
 
-article#aboutme h2{
-    font-size: 1.1em;
-    text-align: left;
+article#aboutme h2 {
+  font-size: 1.1em;
+  text-align: left;
 }
 
 section#partners h1,
@@ -141,12 +140,12 @@ div#skills h2 {
   font-size: 1.2em;
 }
 
-div.text a{
-    color: white;
+div.text a {
+  color: white;
 }
 
-div.text a:hover{
-    color: rgba(25, 177, 83, 0.6);
+div.text a:hover {
+  color: rgba(25, 177, 83, 0.6);
 }
 
 section.portfolio {
@@ -160,31 +159,29 @@ section.portfolio h1 {
 
 /* Game Room Page Styles */
 
-section#games{
-    background-color: rgba(25, 60, 95, 0.6);
-    border: solid rgb(15, 38, 61);
-    border-radius: 1em;
+section#games {
+  background-color: rgba(25, 60, 95, 0.6);
+  border: solid rgb(15, 38, 61);
+  border-radius: 1em;
 }
 
 div#upnext {
-    border: solid rgb(15, 38, 61);
-    border-radius: 1em;
+  border: solid rgb(15, 38, 61);
+  border-radius: 1em;
 }
 
-div#upnext h1{
-    font-size: 1.5em;
+div#upnext h1 {
+  font-size: 1.5em;
 }
 
-section#games figcaption{
-    font-size: 0.7em;
+section#games figcaption {
+  font-size: 0.7em;
 }
 
-h2.title{
-    font-size: 1.5em;
-    text-align: left;
+h2.title {
+  font-size: 1.5em;
+  text-align: left;
 }
-
-
 
 /* Contact Page Styles */
 
@@ -224,6 +221,14 @@ table#calendar td:not(.busy):hover {
 
 td.busy {
   background-color: rgba(95, 25, 25, 0.6);
+}
+
+button.navigate {
+  background-color: inherit;
+}
+
+button.navigate:hover {
+  background-color: rgba(25, 177, 83, 0.6);
 }
 
 fieldset#details {
