@@ -28,29 +28,31 @@ previousMonthButton.addEventListener("click", showPreviousMonth);
 let nextMonthButton = document.getElementById("nextMonth");
 nextMonthButton.addEventListener("click", showNextMonth);
 
+let blackoutEntryRow = document.getElementById("blackoutEntry");
 let blackoutStartDate = document.createElement("input");
+let blackoutEndDate = document.createElement("input");
+let blockDatesButton = document.createElement("input");
+let removeBusyDatesButton = document.createElement("input");
+
+blackoutEntryRow.appendChild(blackoutStartDate);
 blackoutStartDate.setAttribute("type", "date");
 blackoutStartDate.setAttribute("id", "startDate");
 
-let blackoutEndDate = document.createElement("input");
-blackoutEndDate.type = "date";
-blackoutEndDate.id = "endDate";
+blackoutEntryRow.appendChild(blackoutEndDate);
+blackoutEndDate.setAttribute("type", "date");
+blackoutEndDate.setAttribute("id", "endDate");
 
-let blockDatesButton = document.createElement("input");
+blackoutEntryRow.appendChild(blockDatesButton);
 blockDatesButton.setAttribute("type", "submit");
 blockDatesButton.setAttribute("value", "Set Busy Dates");
 blockDatesButton.addEventListener("click", addBusyDates);
 
-let removeBusyDatesButton = document.createElement("input");
+blackoutEntryRow.appendChild(removeBusyDatesButton);
 removeBusyDatesButton.setAttribute("type", "submit");
 removeBusyDatesButton.setAttribute("value", "Remove Busy Dates");
 removeBusyDatesButton.addEventListener("click", removeBusyDates);
 
-let blackoutEntryRow = document.getElementById("blackoutEntry");
-blackoutEntryRow.appendChild(blackoutStartDate);
-blackoutEntryRow.appendChild(blackoutEndDate);
-blackoutEntryRow.appendChild(blockDatesButton);
-blackoutEntryRow.appendChild(removeBusyDatesButton);
+
 
 function displayCalendar(month, year) {
   setCalendarMonth(month, year);
