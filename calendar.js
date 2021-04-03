@@ -17,8 +17,6 @@ let monthsList = [
 
 let today = new Date();
 let busyDates = [today];
-localStorage.setItem("busyDatesArray", JSON.stringify(busyDates));
-
 let currentMonth = today.getMonth();
 let currentYear = today.getFullYear();
 
@@ -29,14 +27,6 @@ previousMonthButton.addEventListener("click", showPreviousMonth);
 
 let nextMonthButton = document.getElementById("nextMonth");
 nextMonthButton.addEventListener("click", showNextMonth);
-
-let blackoutStartDate = document.createElement("input");
-blackoutStartDate.setAttribute("type", "date");
-blackoutStartDate.setAttribute("id", "startDate");
-
-let blackoutEndDate = document.createElement("input");
-blackoutEndDate.setAttribute("type", "date");
-blackoutEndDate.setAttribute("id", "endDate");
 
 let blockDatesButton = document.createElement("input");
 blockDatesButton.setAttribute("type", "submit");
@@ -49,8 +39,6 @@ removeBusyDatesButton.setAttribute("value", "Remove Busy Dates");
 removeBusyDatesButton.addEventListener("click", removeBusyDates);
 
 let blackoutEntryRow = document.getElementById("blackoutEntry");
-blackoutEntryRow.appendChild(blackoutStartDate);
-blackoutEntryRow.appendChild(blackoutEndDate);
 blackoutEntryRow.appendChild(blockDatesButton);
 blackoutEntryRow.appendChild(removeBusyDatesButton);
 
@@ -216,7 +204,7 @@ function setAllBusyDates() {
     for (let x = 0; x < allBusyDates.length; x++) {
       let date2 = new Date(allBusyDates[x]);
       if (date1.getTime() == date2.getTime())
-        days[i].setAttribute("className", "busy");
+        days[i].setAttribute("class", "busy");
     }
   }
 }
