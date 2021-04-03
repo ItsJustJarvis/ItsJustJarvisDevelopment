@@ -33,8 +33,8 @@ blackoutStartDate.setAttribute("type", "date");
 blackoutStartDate.setAttribute("id", "startDate");
 
 let blackoutEndDate = document.createElement("input");
-blackoutEndDate.setAttribute("type", "date");
-blackoutEndDate.setAttribute("id", "endDate");
+blackoutEndDate.type = "date";
+blackoutEndDate.id = "endDate";
 
 let blockDatesButton = document.createElement("input");
 blockDatesButton.setAttribute("type", "submit");
