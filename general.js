@@ -34,13 +34,13 @@ function adminAccess() {
   loginForm.setAttribute("hidden", "true");
   let adminViewList = document.querySelectorAll(".adminOnly");
   for (let i = 0; i < adminViewList.length; i++)
-    adminViewList[i].style.display = "initial";
+    adminViewList[i].removeAttribute("hidden");
 }
 
 function hideAdmin() {
   let adminViewList = document.querySelectorAll(".adminOnly");
   for (let i = 0; i < adminViewList.length; i++)
-    adminViewList[i].style.display = "none";
+    adminViewList[i].setAttribute("hidden", "true");
 }
 
 function createCookie(name, value, days, path, domain, secure) {

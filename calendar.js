@@ -63,6 +63,7 @@ function displayCalendar(month, year) {
 function setCalendarMonth(month, year) {
   let calendarHeading = document.getElementById("monthYear");
   calendarHeading.innerHTML = "";
+  calendarHeading.setAttribute("colspan", "5");
   let text = document.createTextNode(`${monthsList[month]} ${year}`);
   calendarHeading.appendChild(text);
 }
