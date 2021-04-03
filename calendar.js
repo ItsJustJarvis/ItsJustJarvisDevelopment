@@ -16,6 +16,7 @@ let monthsList = [
 ];
 
 let today = new Date();
+today.setHours(0, 0, 0, 0);
 let busyDates = [today];
 let currentMonth = today.getMonth();
 let currentYear = today.getFullYear();
@@ -157,6 +158,10 @@ function updateBusyDates(array) {
 
 function getBusyDates() {
   let retrievedData = localStorage.getItem("busyDatesArray");
+  if (!retrievedData) {
+    saveBusyDates(busyDates);
+    retrievedData = localStorage.getItem("busyDatesArray");
+  }
   let retrievedBusyDatesArray = JSON.parse(retrievedData);
   return retrievedBusyDatesArray;
 }
