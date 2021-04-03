@@ -39,22 +39,25 @@
           /></a>
         </div>
         <div id="adminForm">
+          <div class="adminOnly">
+            <p>Logged In As Admin</p>
+          </div>
           <form id="adminLogIn">
             <fieldset id="logInDetails">
               <legend>Admin Log-In</legend>
               <input
                 type="text"
                 name="username"
-                class="login-form-field"
+                class="logInField"
                 placeholder="Username"
               />
               <input
                 type="password"
                 name="password"
-                class="login-form-field"
+                class="logInField"
                 placeholder="Password"
               />
-              <input type="submit" value="Login" id="login-form-submit" />
+              <input type="submit" value="Login" id="submitLogIn" />
             </fieldset>
           </form>
         </div>
@@ -117,6 +120,6 @@
         </ul>
       </div>
     </footer>
-    <script src="logIn.js"></script>
+    <script src="general.js"></script>
   </body>
 </html>

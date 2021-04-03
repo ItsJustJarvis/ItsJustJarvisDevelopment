@@ -102,8 +102,8 @@ fieldset#logInDetails {
   margin: auto;
 }
 
-input.login-form-field,
-input.login-form-submit {
+input.logInField,
+input.submitLogIn {
   width: 100%;
   flex: auto;
   margin: auto;
