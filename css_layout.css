@@ -420,10 +420,6 @@ button.navigate {
   margin: auto;
 }
 
-.adminOnly{
-  display: none;
-}
-
 /* Form Layout */
 
 form#request {
