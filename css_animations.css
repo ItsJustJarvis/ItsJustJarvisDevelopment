@@ -1,3 +1,5 @@
+/* Modal Animations */
+
 .modalImage,
 #caption {
   animation-name: popup;
@@ -16,3 +18,5 @@
     transform: scale(1);
   }
 }
+
+/* Slideshow Animations */

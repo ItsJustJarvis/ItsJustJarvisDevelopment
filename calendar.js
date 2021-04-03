@@ -77,6 +77,7 @@ function setCalendarDays(month, year) {
         let day = document.createElement("td");
         let dayLabel = document.createTextNode(" ");
         day.appendChild(dayLabel);
+        day.setAttribute("class", "busy");
         week.appendChild(day);
       } else if (dayCount > numberOfDaysInMonth(month, year)) {
         break;

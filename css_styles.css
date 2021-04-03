@@ -144,6 +144,11 @@ figcaption {
   cursor: pointer;
 }
 
+.galleryImage:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
 /* Portfolio Page Styles */
 
 section#intro {

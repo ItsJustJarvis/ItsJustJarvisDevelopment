@@ -209,6 +209,28 @@ section#adventures {
   margin: 1em auto;
 }
 
+/* Gallery styles*/
+
+div.row {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0 3px;
+}
+
+div.column {
+  flex: auto;
+  max-width: 25%;
+  height: 100%;
+  padding: 0 3px;
+}
+
+div.column img {
+  border-radius: 5%;
+  margin-top: 6px;
+  vertical-align: middle;
+  width: 100%;
+}
+
 .modal {
   display: none;
   overflow: auto;
@@ -241,28 +263,6 @@ section#adventures {
   position: absolute;
   top: 1.5em;
   right: 2em;
-}
-
-/* Gallery styles*/
-
-div.row {
-  display: flex;
-  flex-flow: row wrap;
-  padding: 0 3px;
-}
-
-div.column {
-  flex: auto;
-  max-width: 25%;
-  height: 100%;
-  padding: 0 3px;
-}
-
-div.column img {
-  border-radius: 5%;
-  margin-top: 6px;
-  vertical-align: middle;
-  width: 100%;
 }
 
 /* Portfolio Page */
