@@ -17,6 +17,8 @@ let monthsList = [
 
 let today = new Date();
 let busyDates = [today];
+localStorage.setItem("busyDatesArray", JSON.stringify(busyDates));
+
 let currentMonth = today.getMonth();
 let currentYear = today.getFullYear();
 
@@ -214,7 +216,7 @@ function setAllBusyDates() {
     for (let x = 0; x < allBusyDates.length; x++) {
       let date2 = new Date(allBusyDates[x]);
       if (date1.getTime() == date2.getTime())
-        days[i].setAttribute("class", "busy");
+        days[i].setAttribute("className", "busy");
     }
   }
 }
