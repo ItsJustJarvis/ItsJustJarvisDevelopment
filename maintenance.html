@@ -21,12 +21,39 @@
   </head>
   <body>
     <header>
-      <a href="ItsJustJarvis.html"
-        ><img
-          id="logo"
-          src="photos/titleimage.png"
-          alt="ItsJustJarvis Development"
-      /></a>
+      <div id="header">
+        <div id="headerLogo">
+          <a href="ItsJustJarvis.html"
+            ><img
+              id="logo"
+              src="photos/titleimage.png"
+              alt="ItsJustJarvis Development"
+          /></a>
+        </div>
+        <div id="adminForm">
+          <div class="adminOnly">
+            <p>Logged In As Admin</p>
+          </div>
+          <form id="adminLogIn">
+            <fieldset id="logInDetails">
+              <legend>Admin Log-In</legend>
+              <input
+                type="text"
+                name="username"
+                class="logInField"
+                placeholder="Username"
+              />
+              <input
+                type="password"
+                name="password"
+                class="logInField"
+                placeholder="Password"
+              />
+              <input type="submit" value="Login" id="submitLogIn" />
+            </fieldset>
+          </form>
+        </div>
+      </div>
       <nav id="tabs">
         <ul>
           <li><a href="aboutme.html">About Me</a></li>
