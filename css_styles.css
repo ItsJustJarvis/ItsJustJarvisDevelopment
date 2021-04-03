@@ -123,6 +123,27 @@ figcaption {
   font-weight: bold;
 }
 
+.modal {
+  background-color: rgba(25, 60, 95, 0.6);
+}
+
+#caption {
+  text-align: center;
+  color: white;
+}
+
+.closeModal {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.closeModal:hover {
+  color: rgba(25, 177, 83, 0.6);
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /* Portfolio Page Styles */
 
 section#intro {
@@ -217,6 +238,7 @@ td {
 
 table#calendar td:not(.busy):hover {
   background-color: rgba(25, 177, 83, 0.6);
+  cursor: pointer;
 }
 
 td.busy {
@@ -229,6 +251,7 @@ button.navigate {
 
 button.navigate:hover {
   background-color: rgba(25, 177, 83, 0.6);
+  cursor: pointer;
 }
 
 fieldset#details,
