@@ -147,7 +147,7 @@ function addBusyDates(event) {
     let day = Number.parseInt(days[i].innerHTML);
     let dateInQuestion = new Date(currentYear, currentMonth, day);
     if (dateInQuestion >= startBusyDate && dateInQuestion <= endBusyDate) {
-      days[i].setAttribute("className", "busy");
+      days[i].setAttribute("class", "busy");
       busyDates.push(dateInQuestion.toUTCString());
     }
   }
