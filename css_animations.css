@@ -1,0 +1,18 @@
+.modalImage,
+#caption {
+  animation-name: popup;
+  animation-duration: 1s;
+}
+
+.closeModal {
+  transition: 0.5s;
+}
+
+@keyframes popup {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
