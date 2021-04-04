@@ -43,20 +43,23 @@
         <div id="adminForm">
           <div class="adminOnly">
             <p>Logged In As Admin</p>
+            <input type="submit" name="Logout" id="logOut" value="Log Out" />
           </div>
           <form id="adminLogIn">
             <fieldset id="logInDetails">
               <legend>Admin Log-In</legend>
+              <label for="userName">User Name:</label>
               <input
                 type="text"
                 name="username"
-                class="logInField"
+                id="userName"
                 placeholder="Username"
               />
+              <label for="passWord">Password:</label>
               <input
                 type="password"
                 name="password"
-                class="logInField"
+                id="passWord"
                 placeholder="Password"
               />
               <input type="submit" value="Login" id="submitLogIn" />
