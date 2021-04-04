@@ -43,6 +43,9 @@ let blackoutEntryRow = document.getElementById("blackoutEntry");
 blackoutEntryRow.appendChild(blockDatesButton);
 blackoutEntryRow.appendChild(removeBusyDatesButton);
 
+let requestDate = document.getElementById("date");
+requestDate.addEventListener("change", showSelectedMonth);
+
 function displayCalendar(month, year) {
   setCalendarMonth(month, year);
   setCalendarDays(month, year);
@@ -60,18 +63,15 @@ function setCalendarMonth(month, year) {
 function setCalendarDays(month, year) {
   const MAX_ROWS = 6;
   const MAX_DAYS = 7;
-
   let newCalendar = new Date(year, month);
   let weekdayStart = newCalendar.getDay();
   let calendarBody = document.getElementById("calendarBody");
+  let dayCount = 1;
 
   calendarBody.innerHTML = "";
 
-  let dayCount = 1;
-
   for (let row = 0; row < MAX_ROWS; row++) {
     let week = document.createElement("tr");
-
     for (let cell = 0; cell < MAX_DAYS; cell++) {
       if (row == 0 && cell < weekdayStart) {
         let day = document.createElement("td");
@@ -116,12 +116,21 @@ function showNextMonth() {
 }
 
 function showSelectedMonth() {
-  let formDateSelected = document.getElementById("date");
-  let monthSelected = formDateSelected.valueAsDate.getMonth();
-  let yearSelected = formDateSelected.valueAsDate.getFullYear();
+  let daySelected = requestDate.valueAsDate.getUTCDate();
+  let monthSelected = requestDate.valueAsDate.getMonth();
+  let yearSelected = requestDate.valueAsDate.getFullYear();
   currentMonth = monthSelected;
   currentYear = yearSelected;
   displayCalendar(currentMonth, currentYear);
+  setSelectedDay(daySelected);
+}
+
+function setSelectedDay(selectedDay) {
+  let allDays = document.querySelectorAll("#daysOfMonth");
+  for (let i = 0; i < allDays.length; i++) {
+    if (selectedDay == allDays[i].innerHTML)
+      allDays[i].classList.add("selected");
+  }
 }
 
 function addBusyDates(event) {
