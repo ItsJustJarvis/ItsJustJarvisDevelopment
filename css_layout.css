@@ -56,9 +56,13 @@ p {
 input,
 textarea,
 select,
-button,
-legend#servicesLabel {
+button {
   padding: 0.5em;
+}
+
+h3#servicesLabel {
+  padding: 0.3em;
+  text-align: left;
 }
 
 /* Header Layout */
