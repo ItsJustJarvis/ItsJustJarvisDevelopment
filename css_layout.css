@@ -53,6 +53,13 @@ p {
   padding: 0.5em;
 }
 
+input,
+textarea,
+select,
+button {
+  padding: 0.5em;
+}
+
 /* Header Layout */
 
 img#logo {

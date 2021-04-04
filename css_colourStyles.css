@@ -270,6 +270,17 @@ input,
 textarea,
 select {
   background-color: rgba(185, 188, 190, 0.7);
+  border: solid rgb(15, 38, 61);
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+button,
+input.submitLogIn {
+  background-color: white;
+  border: solid rgb(15, 38, 61);
+  border-radius: 0.5em;
+  cursor: pointer;
 }
 
 input.press {
@@ -279,6 +290,7 @@ input.press {
 input:hover,
 textarea:hover,
 select:hover,
-input.press:hover {
+input.press:hover,
+button:hover {
   background-color: rgba(25, 177, 83, 0.6);
 }
