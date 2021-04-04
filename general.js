@@ -10,6 +10,8 @@ const ADMIN = "ItsJustJarvis";
 let loginForm = document.getElementById("adminLogIn");
 let loginButton = document.getElementById("submitLogIn");
 loginButton.addEventListener("click", loggingIn);
+let logoutButton = document.getElementById("logOut");
+logoutButton.addEventListener("click", loggingOut);
 
 function loggingIn(event) {
   event.preventDefault();
@@ -24,6 +26,14 @@ function loggingIn(event) {
   } else {
     alert("Incorrect Log-In Details");
   }
+}
+
+function loggingOut(event) {
+  event.preventDefault();
+  hideAdmin();
+  createCookie("userName", "", -1, "/");
+  location.reload();
+  return false;
 }
 
 function checkForAdmin() {
