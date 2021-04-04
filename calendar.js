@@ -123,6 +123,7 @@ function showSelectedMonth() {
   currentYear = yearSelected;
   displayCalendar(currentMonth, currentYear);
   setSelectedDay(daySelected);
+  requestDate.value = "";
 }
 
 function setSelectedDay(selectedDay) {
