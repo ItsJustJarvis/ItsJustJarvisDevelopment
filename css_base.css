@@ -1,9 +1,9 @@
 /* 
 
   Page:         Base (Reset) CSS Stylesheet
-  Purpose:      Structural Layout Stylesheet
+  Purpose:      Structural Layout/Base Presentation
   Author:       Reeve C Jarvis
-  Last Update:  12-08-2020
+  Last Update:  04-04-2021
 
 */
 
@@ -73,7 +73,9 @@ body {
   vertical-align: baseline;
 }
 
-*, ::before, ::after{
+*,
+::before,
+::after {
   box-sizing: inherit;
 }
 
@@ -91,6 +93,6 @@ nav a {
   text-decoration: none;
 }
 
-a{
+a {
   color: white;
 }

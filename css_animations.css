@@ -1,3 +1,12 @@
+/* 
+
+  Page:         Animations CSS Stylesheet
+  Purpose:      Minor animation abilities for modal presentation
+  Author:       Reeve C Jarvis
+  Last Update:  04-04-2021
+
+*/
+
 /* Modal Animations */
 
 .modalImage,
@@ -18,5 +27,3 @@
     transform: scale(1);
   }
 }
-
-/* Slideshow Animations */
