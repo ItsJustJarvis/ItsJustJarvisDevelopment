@@ -117,9 +117,11 @@ function showNextMonth() {
 
 function showSelectedMonth() {
   let formDateSelected = document.getElementById("date");
-  let monthSelected = formDateSelected.valueAsDate.getUTCMonth();
-  let yearSelected = formDateSelected.valueAsDate.getUTCFullYear();
-  displayCalendar(monthSelected, yearSelected);
+  let monthSelected = formDateSelected.valueAsDate.getMonth();
+  let yearSelected = formDateSelected.valueAsDate.getFullYear();
+  currentMonth = monthSelected;
+  currentYear = yearSelected;
+  displayCalendar(currentMonth, currentYear);
 }
 
 function addBusyDates(event) {
