@@ -43,20 +43,23 @@
         <div id="adminForm">
           <div class="adminOnly">
             <p>Logged In As Admin</p>
+            <input type="submit" name="Logout" id="logOut" value="Log Out" />
           </div>
           <form id="adminLogIn">
             <fieldset id="logInDetails">
               <legend>Admin Log-In</legend>
+              <label for="userName">User Name:</label>
               <input
                 type="text"
                 name="username"
-                class="logInField"
+                id="userName"
                 placeholder="Username"
               />
+              <label for="passWord">Password:</label>
               <input
                 type="password"
                 name="password"
-                class="logInField"
+                id="passWord"
                 placeholder="Password"
               />
               <input type="submit" value="Login" id="submitLogIn" />
@@ -144,33 +147,45 @@
       <h1>Our adventures...</h1>
       <div class="row">
         <div class="column">
-          <img class="galleryImage" src="photos/sFriends.jpg" alt="Friends" />
-          <img class="galleryImage" src="photos/us.jpg" alt="Us" />
-          <img class="galleryImage" src="photos/field.jpg" alt="Field" />
-          <img class="galleryImage" src="photos/lake.jpg" alt="Lake" />
+          <img
+            class="galleryImage"
+            src="photos/sFriends.jpg"
+            alt="Day Drinks"
+          />
+          <img class="galleryImage" src="photos/us.jpg" alt="Three Amigos" />
+          <img class="galleryImage" src="photos/field.jpg" alt="Dog Walks" />
+          <img class="galleryImage" src="photos/lake.jpg" alt="Comox Lake" />
         </div>
         <div class="column">
-          <img class="galleryImage" src="photos/ski.jpg" alt="Ski Solo" />
+          <img class="galleryImage" src="photos/ski.jpg" alt="Solo Ski Day" />
           <img
             class="galleryImage"
             src="photos/waterfall.jpg"
-            alt="Waterfall"
+            alt="Whistler Waterfall"
           />
-          <img class="galleryImage" src="photos/forest.jpg" alt="Forest" />
+          <img
+            class="galleryImage"
+            src="photos/forest.jpg"
+            alt="Forest Swamps "
+          />
           <img
             class="galleryImage"
             src="photos/kalaArchie.jpg"
-            alt="Kayla and Archie"
+            alt="Best Friends"
           />
         </div>
         <div class="column">
           <img
             class="galleryImage"
             src="photos/reeveandkayla.jpg"
-            alt="Couple"
+            alt="Strathcona Park"
           />
-          <img class="galleryImage" src="photos/slake.jpg" alt="Lake" />
-          <img class="galleryImage" src="photos/stick.jpg" alt="Archie Stick" />
+          <img
+            class="galleryImage"
+            src="photos/slake.jpg"
+            alt="Waterton Lakes"
+          />
+          <img class="galleryImage" src="photos/stick.jpg" alt="Happy Doggo" />
           <img
             class="galleryImage"
             src="photos/weski.jpg"
@@ -178,9 +193,21 @@
           />
         </div>
         <div class="column">
-          <img class="galleryImage" src="photos/harbour.jpg" alt="Harbour" />
-          <img class="galleryImage" src="photos/snow.jpg" alt="Snowy Dog" />
-          <img class="galleryImage" src="photos/beach.jpg" alt="Beach" />
+          <img
+            class="galleryImage"
+            src="photos/harbour.jpg"
+            alt="Harbourfront View"
+          />
+          <img
+            class="galleryImage"
+            src="photos/snow.jpg"
+            alt="Snowy Adventures"
+          />
+          <img
+            class="galleryImage"
+            src="photos/beach.jpg"
+            alt="Airforce Beach"
+          />
           <img class="galleryImage" src="photos/fam.jpg" alt="Family Photo" />
         </div>
       </div>
