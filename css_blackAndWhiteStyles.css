@@ -54,22 +54,6 @@ hr {
   border: solid black;
 }
 
-input,
-textarea,
-select,
-button,
-input.submitLogIn {
-  background-color: white;
-  border: solid black;
-  border-radius: 0.5em;
-  cursor: pointer;
-}
-
-button:hover,
-input.submitLogIn:hover {
-  background-color: rgba(146, 146, 146, 0.6);
-}
-
 /* Header Styles */
 
 img#logo {
@@ -145,6 +129,8 @@ figcaption {
 
 #caption {
   text-align: center;
+  font-size: x-large;
+  font-weight: bolder;
   color: white;
 }
 
@@ -275,11 +261,18 @@ button.navigate:hover {
   cursor: pointer;
 }
 
+/* Form Styles */
+
 fieldset#details,
 fieldset#blackoutEntry {
   border: solid black;
   border-radius: 1em;
   background-color: rgba(46, 46, 46, 0.6);
+}
+
+fieldset#logInDetails {
+  border: solid white;
+  border-radius: 1em;
 }
 
 input.press {
@@ -289,6 +282,21 @@ input.press {
 input:hover,
 textarea:hover,
 select:hover,
-input.press:hover {
+input.press:hover,
+button:hover,
+input#submitLogIn:hover,
+input#logOut:hover {
   background-color: rgba(168, 168, 168, 0.6);
+}
+
+input,
+textarea,
+select,
+button,
+input#submitLogIn,
+input#logOut {
+  background-color: white;
+  border: solid black;
+  border-radius: 0.5em;
+  cursor: pointer;
 }
