@@ -111,9 +111,14 @@ input.submitLogIn {
 
 /* Footer Layout */
 
-footer div {
+footer > div {
   flex: auto;
   width: 33%;
+  margin: auto;
+}
+
+div#theme {
+  width: 100%;
 }
 
 div#links ul {
