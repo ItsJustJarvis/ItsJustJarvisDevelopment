@@ -109,7 +109,7 @@ function setCalendarDays(month, year) {
         break;
       } else {
         let day = document.createElement("td");
-        day.setAttribute("id", "daysOfMonth");
+        day.classList.add("daysOfMonth");
         let dayLabel = document.createTextNode(dayCount);
         day.appendChild(dayLabel);
         week.appendChild(day);
@@ -160,7 +160,7 @@ function showSelectedMonth() {
 
 //Function to highlight the date selected in the request-form
 function setSelectedDay(selectedDay) {
-  let allDays = document.querySelectorAll("#daysOfMonth");
+  let allDays = document.querySelectorAll(".daysOfMonth");
   for (let i = 0; i < allDays.length; i++) {
     if (selectedDay == allDays[i].innerHTML)
       allDays[i].classList.add("selected");
@@ -179,13 +179,13 @@ function addBusyDates(event) {
   let endEntry = document.getElementById("endDate");
   let endBusyDate = new Date(endEntry.value + "T00:00");
 
-  let days = document.querySelectorAll("#daysOfMonth");
+  let days = document.querySelectorAll(".daysOfMonth");
 
   for (let i = 0; i < days.length; i++) {
     let day = Number.parseInt(days[i].innerHTML);
     let dateInQuestion = new Date(currentYear, currentMonth, day);
     if (dateInQuestion >= startBusyDate && dateInQuestion <= endBusyDate) {
-      days[i].setAttribute("class", "busy");
+      days[i].classList.add("busy");
       busyDates.push(dateInQuestion.toUTCString());
     }
   }
@@ -229,7 +229,7 @@ function removeBusyDates(event) {
   let endEntry = document.getElementById("endDate");
   let endDateRemoval = new Date(endEntry.value + "T00:00");
 
-  let days = document.querySelectorAll("#daysOfMonth");
+  let days = document.querySelectorAll(".daysOfMonth");
   for (let i = 0; i < days.length; i++) {
     let day = Number.parseInt(days[i].innerHTML);
     let dateInQuestion = new Date(currentYear, currentMonth, day);
@@ -237,7 +237,7 @@ function removeBusyDates(event) {
       dateInQuestion >= startDateRemoval &&
       dateInQuestion <= endDateRemoval
     ) {
-      days[i].removeAttribute("class");
+      days[i].classList.remove("busy");
       for (let x = 0; x < allBusyDates.length; x++) {
         let dateToCompare = new Date(allBusyDates[x]);
         if (dateInQuestion.getTime() == dateToCompare.getTime()) {
@@ -254,15 +254,14 @@ function removeBusyDates(event) {
 //Function to set all the busy dates within presented calendar using persistent list of busy dates in local storage
 function setAllBusyDates() {
   let allBusyDates = getBusyDates();
-  let days = document.querySelectorAll("#daysOfMonth");
+  let days = document.querySelectorAll(".daysOfMonth");
 
   for (let i = 0; i < days.length; i++) {
     let day = Number.parseInt(days[i].innerHTML);
     let date1 = new Date(currentYear, currentMonth, day);
     for (let x = 0; x < allBusyDates.length; x++) {
       let date2 = new Date(allBusyDates[x]);
-      if (date1.getTime() == date2.getTime())
-        days[i].setAttribute("class", "busy");
+      if (date1.getTime() == date2.getTime()) days[i].classList.add("busy");
     }
   }
 }
