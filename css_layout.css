@@ -56,7 +56,8 @@ p {
 input,
 textarea,
 select,
-button {
+button,
+legend#servicesLabel {
   padding: 0.5em;
 }
 
@@ -95,25 +96,6 @@ div#headerLogo {
   width: 80%;
   margin: auto;
   flex: auto;
-}
-
-div#adminForm {
-  width: 20%;
-  flex: auto;
-  margin: auto;
-}
-
-fieldset#logInDetails {
-  display: flex;
-  flex-flow: column wrap;
-  margin: auto;
-}
-
-input.logInField,
-input.submitLogIn {
-  width: 100%;
-  flex: auto;
-  margin: auto;
 }
 
 /* Footer Layout */
@@ -446,6 +428,7 @@ div.methods {
   margin: 1em auto;
   padding: 0.5em;
   width: 90%;
+  overflow: hidden;
 }
 
 img#headshot {
@@ -507,6 +490,33 @@ div#buttons {
   flex: auto;
   width: 40%;
   margin-left: auto;
+}
+
+div#adminForm {
+  width: 20%;
+  flex: auto;
+  margin: auto;
+  padding: 0.5em;
+}
+
+fieldset#logInDetails {
+  display: flex;
+  flex-flow: column wrap;
+  margin: auto;
+}
+
+input#passWord,
+input#userName {
+  width: 100%;
+  flex: auto;
+  margin: auto;
+}
+
+input#submitLogIn,
+input#logOut {
+  width: 50%;
+  flex: auto;
+  margin: auto;
 }
 
 /*Responsive Features*/
@@ -645,6 +655,21 @@ div#buttons {
     width: 100%;
   }
   div#adminForm {
+    width: 50%;
+    flex-direction: row;
+  }
+
+  fieldset#logInDetails {
+    width: 90%;
+  }
+
+  input#passWord,
+  input#userName {
+    width: 100%;
+  }
+
+  input#submitLogIn,
+  input#logOut {
     width: 50%;
   }
 }
