@@ -129,6 +129,8 @@ figcaption {
 
 #caption {
   text-align: center;
+  font-size: x-large;
+  font-weight: bolder;
   color: white;
 }
 
@@ -259,11 +261,22 @@ button.navigate:hover {
   cursor: pointer;
 }
 
+/* Form Styles */
+
+legend#servicesRequired {
+  font-weight: bolder;
+}
+
 fieldset#details,
 fieldset#blackoutEntry {
   border: solid rgb(15, 38, 61);
   border-radius: 1em;
   background-color: rgba(25, 60, 95, 0.7);
+}
+
+fieldset#logInDetails {
+  border: solid white;
+  border-radius: 1em;
 }
 
 input,
@@ -276,7 +289,8 @@ select {
 }
 
 button,
-input.submitLogIn {
+input#submitLogIn,
+input#logOut {
   background-color: white;
   border: solid rgb(15, 38, 61);
   border-radius: 0.5em;
@@ -291,6 +305,12 @@ input:hover,
 textarea:hover,
 select:hover,
 input.press:hover,
-button:hover {
+button:hover,
+input#submitLogIn:hover,
+input#logOut:hover {
   background-color: rgba(25, 177, 83, 0.6);
+}
+
+td.selected {
+  border: solid white;
 }
