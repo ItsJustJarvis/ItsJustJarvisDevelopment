@@ -1,12 +1,15 @@
 "use strict";
 
+window.addEventListener("load", checkForAdmin);
+window.addEventListener("load", themeEnabler);
+
+/* Pretend Log In/Admin Access  */
+
 const ADMIN = "ItsJustJarvis";
 
 let loginForm = document.getElementById("adminLogIn");
 let loginButton = document.getElementById("submitLogIn");
-
 loginButton.addEventListener("click", loggingIn);
-window.addEventListener("load", checkForAdmin);
 
 function loggingIn(event) {
   event.preventDefault();
@@ -16,7 +19,7 @@ function loggingIn(event) {
 
   if (username === "ItsJustJarvis" && password === "admin") {
     alert("Welcome Back Reeve!");
-    createCookie("userName", username);
+    createCookie("userName", username, 1, "/");
     adminAccess();
   } else {
     alert("Incorrect Log-In Details");
@@ -42,6 +45,70 @@ function hideAdmin() {
   for (let i = 0; i < adminViewList.length; i++)
     adminViewList[i].setAttribute("hidden", "true");
 }
+
+/* Black And White Mode */
+
+let themeBW, themeColour;
+let themeButton = document.getElementById("themeButton");
+themeButton.addEventListener("click", changeMode);
+
+function themeEnabler() {
+  let themeReference = getCookie("theme");
+  let allStyleSheets = document.styleSheets;
+
+  for (let i = 0; i < allStyleSheets.length; i++) {
+    if (allStyleSheets[i].href.indexOf("css_blackAndWhiteStyles.css") != -1)
+      themeBW = allStyleSheets[i];
+    if (allStyleSheets[i].href.indexOf("css_colourStyles.css") != -1)
+      themeColour = allStyleSheets[i];
+  }
+
+  if (themeReference == null) {
+    themeBW.disabled = true;
+  } else if (themeReference == themeBW.href) {
+    themeColour.disabled = true;
+  } else {
+    themeBW.disabled = true;
+  }
+  setThemeButtonText();
+  setThemePhotos();
+}
+
+function setThemePhotos() {
+  let allPhotos = document.querySelectorAll("img");
+  let photoSourceFolder;
+
+  if (themeBW.disabled) photoSourceFolder = "photos";
+  if (themeColour.disabled) photoSourceFolder = "bwPhotos";
+
+  for (let i = 0; i < allPhotos.length; i++) {
+    let path = allPhotos[i].src;
+    let pathArray = path.split("/");
+    let file = pathArray[pathArray.length - 1];
+    let newSRC = `${photoSourceFolder}/${file}`;
+    allPhotos[i].setAttribute("src", newSRC);
+  }
+}
+
+function setThemeButtonText() {
+  if (themeBW.disabled) {
+    themeButton.innerHTML = "Black/White Mode";
+    createCookie("theme", themeColour.href);
+  }
+  if (themeColour.disabled) {
+    themeButton.innerHTML = "Colour Mode";
+    createCookie("theme", themeBW.href);
+  }
+}
+
+function changeMode() {
+  themeBW.disabled = !themeBW.disabled;
+  themeColour.disabled = !themeBW.disabled;
+  setThemeButtonText();
+  setThemePhotos();
+}
+
+/* Cookies */
 
 function createCookie(name, value, days, path, domain, secure) {
   let expires;
