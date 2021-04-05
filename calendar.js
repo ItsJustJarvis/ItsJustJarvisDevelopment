@@ -36,7 +36,8 @@ let currentYear = today.getFullYear();
 const MAX_WEEKS = 6;
 const MAX_DAYS = 7;
 
-//Initialize an array to contain busy dates, set initial contents to include today (no same day bookings without special request)
+//Initialize an array to contain busy dates, set initial contents to include today (no same day bookings
+//without special request)
 let busyDates = [today];
 
 //On loading page, display calendar with current month/year
@@ -86,8 +87,8 @@ function setCalendarMonth(month, year) {
   calendarHeading.appendChild(text);
 }
 
-//Dynamically create calendar table and set the days of the calendar month, removing and refreshing the values on a month change.
-//Implemented using ideas from course assignments and techniques found in research.
+//Dynamically create calendar table and set the days of the calendar month, removing and refreshing the values
+//on a month change. Implemented using ideas from course assignments and techniques found in research.
 //Adjusted to fit my needs and react to busy date scheduling functionality.
 function setCalendarDays(month, year) {
   let newCalendar = new Date(year, month);
@@ -132,13 +133,14 @@ function removeUnwantedDates() {
   }
 }
 
-//Function to get an accurate number of days in month by using technique found in research on stack overflow.
-//Setting the date to larger value than possible resets to the last day
+//Function to get an accurate number of days in month by using technique found in research
+// on stack overflow. Setting the date to larger value than possible resets to the last day.
 function numberOfDaysInMonth(month, year) {
   return 32 - new Date(year, month, 32).getDate();
 }
 
-//Event handler for previous month button press, adjusting the value of the current month and reacting to possible year change then displaying new calendar
+//Event handler for previous month button press, adjusting the value of the current month and
+//reacting to possible year change then displaying new calendar
 function showPreviousMonth() {
   currentMonth--;
   if (currentMonth < 0) {
@@ -148,7 +150,8 @@ function showPreviousMonth() {
   displayCalendar(currentMonth, currentYear);
 }
 
-//Event handler for next month button press, adjusting the value of the current month and reacting to possible year change then displaying new calendar
+//Event handler for next month button press, adjusting the value of the current month and
+//reacting to possible year change then displaying new calendar
 function showNextMonth() {
   currentMonth++;
   if (currentMonth > 11) {
@@ -158,7 +161,8 @@ function showNextMonth() {
   displayCalendar(currentMonth, currentYear);
 }
 
-//Cross-calendar reaction to request-form date selection, showing the month and year selected as well as highlighting the day to check availability
+//Cross-calendar reaction to request-form date selection, showing the month and year selected
+//as well as highlighting the day to check availability
 function showSelectedMonth() {
   let daySelected = requestDate.valueAsDate.getUTCDate();
   let monthSelected = requestDate.valueAsDate.getMonth();
@@ -179,9 +183,10 @@ function setSelectedDay(selectedDay) {
   }
 }
 
-//Event handler to add busy dates to the calendar schedule, blocking them out and adding them to the array/local storage to remain persistent.
-//This implementation using local storage is purely to display functionality as github only allows static websites.
-//To be adjusted when website is hosted elsewhere.
+//Event handler to add busy dates to the calendar schedule, blocking them out and adding them to
+// the array/local storage to remain persistent. This implementation using local storage is purely
+//to display functionality as github only allows static websites. To be adjusted when website is
+//hosted elsewhere.
 function addBusyDates(event) {
   event.preventDefault();
 
@@ -211,7 +216,8 @@ function saveBusyDates(array) {
   localStorage.setItem("busyDatesArray", JSON.stringify(array));
 }
 
-//Function to update/concatenate busy date arrays as necessary to maintain running list and then save to local storage using JSON
+//Function to update/concatenate busy date arrays as necessary to maintain running list
+//and then save to local storage using JSON
 function updateBusyDates(array) {
   let updatedBusyDatesArray = getBusyDates();
   let newArray = updatedBusyDatesArray.concat(array);
@@ -229,7 +235,8 @@ function getBusyDates() {
   return retrievedBusyDatesArray;
 }
 
-//Event handler to remove busy dates from the schedule and return them to their open state, updating local storage to maintain current list
+//Event handler to remove busy dates from the schedule and return them to their open state,
+//updating local storage to maintain current list
 function removeBusyDates(event) {
   event.preventDefault();
 
@@ -263,7 +270,8 @@ function removeBusyDates(event) {
   endEntry.value = "";
 }
 
-//Function to set all the busy dates within presented calendar using persistent list of busy dates in local storage
+//Function to set all the busy dates within presented calendar using persistent list of busy
+//dates in local storage
 function setAllBusyDates() {
   let allBusyDates = getBusyDates();
   let days = document.querySelectorAll(".daysOfMonth");

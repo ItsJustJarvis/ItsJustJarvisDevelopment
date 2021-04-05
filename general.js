@@ -88,7 +88,8 @@ let themeButton = document.getElementById("themeButton");
 themeButton.addEventListener("click", changeMode);
 
 //Theme enabler refactored and implemented much cleaner than in previous assignment
-//Get cookie for current theme and set accordingly by accessing stylesheet list and attaching variables to govern each theme.
+//Get cookie for current theme and set accordingly by accessing stylesheet list and
+//attaching variables to govern each theme.
 //Set the proper button text, and photos (colour or black and white)
 function themeEnabler() {
   let themeReference = getCookie("theme");
