@@ -33,6 +33,8 @@ let today = new Date();
 today.setHours(0, 0, 0, 0);
 let currentMonth = today.getMonth();
 let currentYear = today.getFullYear();
+const MAX_ROWS = 6;
+const MAX_DAYS = 7;
 
 //Initialize an array to contain busy dates, set initial contents to include today (no same day bookings without special request)
 let busyDates = [today];
@@ -88,8 +90,6 @@ function setCalendarMonth(month, year) {
 //Implemented using ideas from course assignments and techniques found in research.
 //Adjusted to fit my needs and react to busy date scheduling functionality.
 function setCalendarDays(month, year) {
-  const MAX_ROWS = 6;
-  const MAX_DAYS = 7;
   let newCalendar = new Date(year, month);
   let weekdayStart = newCalendar.getDay();
   let calendarBody = document.getElementById("calendarBody");
@@ -99,14 +99,13 @@ function setCalendarDays(month, year) {
 
   for (let row = 0; row < MAX_ROWS; row++) {
     let week = document.createElement("tr");
+    week.setAttribute("class", "weeks");
     for (let cell = 0; cell < MAX_DAYS; cell++) {
       if (row == 0 && cell < weekdayStart) {
         let day = document.createElement("td");
         let dayLabel = document.createTextNode(" ");
         day.appendChild(dayLabel);
         week.appendChild(day);
-      } else if (dayCount > numberOfDaysInMonth(month, year)) {
-        break;
       } else {
         let day = document.createElement("td");
         day.classList.add("daysOfMonth");
@@ -118,10 +117,23 @@ function setCalendarDays(month, year) {
     }
     calendarBody.appendChild(week);
   }
+  removeUnwantedDates();
+}
+
+function removeUnwantedDates() {
+  let allDays = document.querySelectorAll(".daysOfMonth");
+  for (let i = 0; i < allDays.length; i++) {
+    if (
+      Number.parseInt(allDays[i].innerHTML) >
+      numberOfDaysInMonth(currentMonth, currentYear)
+    ) {
+      allDays[i].style.display = "none";
+    }
+  }
 }
 
 //Function to get an accurate number of days in month by using technique found in research on stack overflow.
-//Setting the date to larger value than possible resets to the first day of month
+//Setting the date to larger value than possible resets to the last day
 function numberOfDaysInMonth(month, year) {
   return 32 - new Date(year, month, 32).getDate();
 }
