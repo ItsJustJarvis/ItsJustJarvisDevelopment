@@ -33,7 +33,7 @@ let today = new Date();
 today.setHours(0, 0, 0, 0);
 let currentMonth = today.getMonth();
 let currentYear = today.getFullYear();
-const MAX_ROWS = 6;
+const MAX_WEEKS = 6;
 const MAX_DAYS = 7;
 
 //Initialize an array to contain busy dates, set initial contents to include today (no same day bookings without special request)
@@ -51,10 +51,10 @@ let nextMonthButton = document.getElementById("nextMonth");
 nextMonthButton.addEventListener("click", showNextMonth);
 
 //Create button to submit new busy dates, set attributes and event listener
-let blockDatesButton = document.createElement("input");
-blockDatesButton.setAttribute("type", "submit");
-blockDatesButton.setAttribute("value", "Set Busy Dates");
-blockDatesButton.addEventListener("click", addBusyDates);
+let setBusyDatesButton = document.createElement("input");
+setBusyDatesButton.setAttribute("type", "submit");
+setBusyDatesButton.setAttribute("value", "Set Busy Dates");
+setBusyDatesButton.addEventListener("click", addBusyDates);
 
 //Create button to remove busy dates from schedule, set attributes and event listener
 let removeBusyDatesButton = document.createElement("input");
@@ -63,9 +63,9 @@ removeBusyDatesButton.setAttribute("value", "Remove Busy Dates");
 removeBusyDatesButton.addEventListener("click", removeBusyDates);
 
 //Get ahold of container for scheduling form, append previously created submit buttons to it
-let blackoutEntryRow = document.getElementById("blackoutEntry");
-blackoutEntryRow.appendChild(blockDatesButton);
-blackoutEntryRow.appendChild(removeBusyDatesButton);
+let scheduleEntryRow = document.getElementById("blackoutEntry");
+scheduleEntryRow.appendChild(setBusyDatesButton);
+scheduleEntryRow.appendChild(removeBusyDatesButton);
 
 //Get ahold of request form date entry to allow cross-calendar response, set event listener to respond to changes
 let requestDate = document.getElementById("date");
@@ -97,9 +97,9 @@ function setCalendarDays(month, year) {
 
   calendarBody.innerHTML = "";
 
-  for (let row = 0; row < MAX_ROWS; row++) {
+  for (let row = 0; row < MAX_WEEKS; row++) {
     let week = document.createElement("tr");
-    week.setAttribute("class", "weeks");
+    week.setAttribute("className", "weeks");
     for (let cell = 0; cell < MAX_DAYS; cell++) {
       if (row == 0 && cell < weekdayStart) {
         let day = document.createElement("td");
