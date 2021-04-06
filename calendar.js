@@ -100,12 +100,13 @@ function setCalendarDays(month, year) {
 
   for (let row = 0; row < MAX_WEEKS; row++) {
     let week = document.createElement("tr");
-    week.setAttribute("className", "weeks");
+    week.classList.add("weeks");
     for (let cell = 0; cell < MAX_DAYS; cell++) {
       if (row == 0 && cell < weekdayStart) {
         let day = document.createElement("td");
         let dayLabel = document.createTextNode(" ");
         day.appendChild(dayLabel);
+        day.classList.add("lastMonth");
         week.appendChild(day);
       } else {
         let day = document.createElement("td");
