@@ -124,12 +124,7 @@ function setCalendarDays(month, year) {
   removeUnwantedCells(priorCellsUsed);
 }
 
-
-
 //Remove unwanted cells from calendar display to keep desired appearance.
-//I made some last minute adjustments after submitting my report, so this will not
-//be properly documented, but I am submitting this change at 11:14 PM before the 
-//due time.
 function removeUnwantedCells(priorCellsUsed) {
   let allDays = document.querySelectorAll(".daysOfMonth");
   let trailingCells =
