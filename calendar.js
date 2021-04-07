@@ -3,7 +3,7 @@ Name:   Reeve Jarvis
 Course: DGL-113
 Section: DLU1
 Assignment: Course Project
-Update Date: 04/04/2021
+Update Date: 04/06/2021
 
 Filename:   calendar.js
 
@@ -94,6 +94,7 @@ function setCalendarDays(month, year) {
   let newCalendar = new Date(year, month);
   let weekdayStart = newCalendar.getDay();
   let calendarBody = document.getElementById("calendarBody");
+  let priorCellsUsed = 1;
   let dayCount = 1;
 
   calendarBody.innerHTML = "";
@@ -108,6 +109,7 @@ function setCalendarDays(month, year) {
         day.appendChild(dayLabel);
         day.classList.add("lastMonth");
         week.appendChild(day);
+        priorCellsUsed++;
       } else {
         let day = document.createElement("td");
         day.classList.add("daysOfMonth");
@@ -119,17 +121,30 @@ function setCalendarDays(month, year) {
     }
     calendarBody.appendChild(week);
   }
-  removeUnwantedDates();
+  removeUnwantedCells(priorCellsUsed);
 }
 
-function removeUnwantedDates() {
+
+
+//Remove unwanted cells from calendar display to keep desired appearance.
+//I made some last minute adjustments after submitting my report, so this will not
+//be properly documented, but I am submitting this change at 11:14 PM before the 
+//due time.
+function removeUnwantedCells(priorCellsUsed) {
   let allDays = document.querySelectorAll(".daysOfMonth");
+  let trailingCells =
+    allDays.length - numberOfDaysInMonth(currentMonth, currentYear);
+  let difference = trailingCells % 7;
+  let cellsToKeep = difference + numberOfDaysInMonth(currentMonth, currentYear);
   for (let i = 0; i < allDays.length; i++) {
-    if (
+    if (Number.parseInt(allDays[i].innerHTML) > cellsToKeep) {
+      allDays[i].style.display = "none";
+    } else if (
       Number.parseInt(allDays[i].innerHTML) >
       numberOfDaysInMonth(currentMonth, currentYear)
     ) {
-      allDays[i].style.display = "none";
+      allDays[i].innerHTML = " ";
+      allDays[i].classList.add("lastMonth");
     }
   }
 }
