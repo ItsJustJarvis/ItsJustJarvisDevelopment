@@ -243,13 +243,17 @@ td {
   line-height: 3em;
 }
 
-table#calendar td:not(.busy):hover {
+table#calendar td:not(.busy, .lastMonth):hover {
   background-color: rgba(168, 168, 168, 0.6);
   cursor: pointer;
 }
 
 td.busy {
   background-color: black;
+}
+
+.lastMonth {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 button.navigate {
