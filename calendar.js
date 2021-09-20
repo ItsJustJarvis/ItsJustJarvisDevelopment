@@ -94,7 +94,6 @@ function setCalendarDays(month, year) {
   let newCalendar = new Date(year, month);
   let weekdayStart = newCalendar.getDay();
   let calendarBody = document.getElementById("calendarBody");
-  let priorCellsUsed = 1;
   let dayCount = 1;
 
   calendarBody.innerHTML = "";
@@ -109,7 +108,6 @@ function setCalendarDays(month, year) {
         day.appendChild(dayLabel);
         day.classList.add("lastMonth");
         week.appendChild(day);
-        priorCellsUsed++;
       } else {
         let day = document.createElement("td");
         day.classList.add("daysOfMonth");
@@ -121,11 +119,11 @@ function setCalendarDays(month, year) {
     }
     calendarBody.appendChild(week);
   }
-  removeUnwantedCells(priorCellsUsed);
+  removeUnwantedCells();
 }
 
 //Remove unwanted cells from calendar display to keep desired appearance.
-function removeUnwantedCells(priorCellsUsed) {
+function removeUnwantedCells() {
   let allDays = document.querySelectorAll(".daysOfMonth");
   let trailingCells =
     allDays.length - numberOfDaysInMonth(currentMonth, currentYear);
